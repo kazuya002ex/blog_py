@@ -12,5 +12,7 @@ class BlogModel(models.Model):
   postdate = models.DateField(auto_now_add=True)
   category = models.CharField(
     max_length = 50,
-    choises = CATEGORY
+    choices = CATEGORY
   )
+  def __str__(self):
+    return self.title
